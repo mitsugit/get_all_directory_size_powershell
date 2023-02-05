@@ -1,0 +1,1 @@
+Get-ChildItem -Path C:\ -Directory | Select-Object Name,@{Name='Size(MB)';Expression={(Get-ChildItem $_.FullName -Recurse | Measure-Object -Property Length -Sum).Sum / 1MB}} | Export-Csv -Path C:\directory_check_py\directory_size_list.csv
