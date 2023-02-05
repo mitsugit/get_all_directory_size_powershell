@@ -1,0 +1,3 @@
+Get-ChildItem -Path "C:\Users\addre" -Recurse | 
+    Select-Object FullName, Length | 
+    Export-Csv -Path "C:\directory_check_py\each_directory_size_list.csv"
